@@ -16,6 +16,7 @@ export default defineConfig({
     ['name','uno-classes'],
     */
   ],
+  safelist: ['animate-spin'],
   // WebStorm don't support unocss config, so theme put in tailwind.config.cjs
   theme: {
     ...twConfig.theme.extend,

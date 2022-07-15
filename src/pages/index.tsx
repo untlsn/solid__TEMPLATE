@@ -1,7 +1,7 @@
-function Index() {
+function Home() {
   return (
     <div>
-      <header class="bg-[#282c34] min-h-screen flex flex-col items-center justify-center text-[calc(10px+2vmin)] text-white">
+      <header class="bg-[#282c34] min-h-screen flex flex-col items-center justify-center text-2xl text-white">
         <img src="/logo.svg" class="h-40vmin animate-[20s_spin] mb-8" alt="logo" />
         <p>
           <span>Edit </span>
@@ -19,4 +19,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default Home;
