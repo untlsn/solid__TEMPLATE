@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import styles from './App.module.css';
+import '$css';
 
 function App() {
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
+    <div>
+      <header class="bg-[#282c34] min-h-screen flex flex-col items-center justify-center text-[calc(10px+2vmin)] text-white">
+        <img src="/logo.svg" class="h-40vmin animate-[20s_spin] mb-8" alt="logo" />
         <p>
           <span>Edit </span>
           <code>src/App.tsx</code>
           <span> and save to reload.</span>
         </p>
         <a
-          class={styles.link}
+          class="text-[#b318f0]"
           href="https://github.com/solidjs/solid"
           target="_blank"
           rel="noopener noreferrer"
