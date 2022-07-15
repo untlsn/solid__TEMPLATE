@@ -1,5 +1,10 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
-import App from './App';
+import App from '~/App';
+import { getLazyRoutes } from '~/routes';
 
-render(() => <App />, document.getElementById('root') as HTMLElement);
+const routes = getLazyRoutes();
+
+render(() => (
+  <App routes={routes} />
+), document.getElementById('root') as HTMLElement);
