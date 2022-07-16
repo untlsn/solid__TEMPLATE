@@ -6,6 +6,9 @@ import autoImport from 'unplugin-auto-import/vite';
 import Inspect from 'vite-plugin-inspect';
 
 export default defineConfig({
+  ssr: {
+    noExternal: ['solid-app-router', 'solid-js/web'],
+  },
   resolve: {
     alias: {
       '~/': `${path.join(__dirname, '/src')}/`,
@@ -13,7 +16,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    solidPlugin(),
+    solidPlugin({ ssr: true }),
     css(),
     autoImport({
       dts: 'src/auto-imports.d.ts',

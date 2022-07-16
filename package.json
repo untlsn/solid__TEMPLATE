@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "start": "vite",
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "npm run build:client && npm run build:server && npm run prerender",
+    "build:client": "vite build --outDir dist",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
+    "preview": "vite preview",
+    "prerender": "node server/prerender.mjs"
   },
   "license": "MIT",
   "devDependencies": {

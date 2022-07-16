@@ -12,9 +12,9 @@ function RoutesWrapper(props: { routes: Route[] }) {
   );
 }
 
-function App(props: { routes: Route[] }) {
+function App(props: { routes: Route[], url?: string }) {
   return (
-    <Router>
+    <Router url={props.url}>
       <RoutesWrapper routes={props.routes} />
     </Router>
   );
