@@ -1,34 +1,63 @@
+# Simple solid-js started inspired by vitesse
+
+## Features
+
+- ⚡️ [Solid-js](https://github.com/solidjs/solid), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
+
+- 🗂 [File based routing](./src/pages)
+
+- 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
+
+- 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+
+- 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
+
+- 🖨 Static-site generation (SSG) build in [pnpm prerender](./server)
+
+- 🦾 TypeScript, of course
+
+## Pre-packed
+
+### UI Frameworks
+
+- [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
+
+### Icons
+
+- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
+- [Pure CSS Icons via UnoCSS](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
+
+### Plugins
+- [`solid-app-router`](https://github.com/solidjs/solid-app-router)
+- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Solid API and others without importing
+- [`solid-meta`](https://github.com/solidjs/solid-meta) - manipulate document head reactively
+
+### Coding Style
+
+- [ESLint](https://eslint.org/) predefine with airbnb, solid and react (for JSX)
+
+### Dev tools
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [pnpm](https://pnpm.js.org/) - fast, disk space efficient package manager
+
 ## Usage
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+### Development
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+Just run and visit http://localhost:3333
 
 ```bash
-$ npm install # or pnpm install or yarn install
+pnpm dev
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+### Build
 
-## Available Scripts
+To build the App, run
 
-In the project directory, you can run:
+```bash
+pnpm build
+```
 
-### `npm dev` or `npm start`
+And you will see the generated file in `dist` that ready to be served.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
