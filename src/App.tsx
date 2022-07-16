@@ -1,5 +1,7 @@
 import '$css';
+import { MetaProvider } from 'solid-meta';
 import type { Route } from '~/routes';
+import DefaultHead from '~/components/DefaultHead';
 
 function RoutesWrapper(props: { routes: Route[] }) {
   // eslint-disable-next-line solid/reactivity
@@ -12,11 +14,14 @@ function RoutesWrapper(props: { routes: Route[] }) {
   );
 }
 
-function App(props: { routes: Route[], url?: string }) {
+function App(props: { routes: Route[], url?: string, tags?: any[] }) {
   return (
-    <Router url={props.url}>
-      <RoutesWrapper routes={props.routes} />
-    </Router>
+    <MetaProvider tags={props.tags || []}>
+      <Router url={props.url}>
+        <DefaultHead />
+        <RoutesWrapper routes={props.routes} />
+      </Router>
+    </MetaProvider>
   );
 }
 

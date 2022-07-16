@@ -14,10 +14,12 @@ const bootstrap = async () => {
   for (const _url of staticNames) {
     let url = `/${_url.replace(/(\.\/pages\/)|(index)|(\.[tj]sx)/g, '')}`;
 
-    // eslint-disable-next-line no-await-in-loop
-    const appHtml = await render(url);
+    const tags = [];
 
-    const html = renderTemplate(template, appHtml, hydration);
+    // eslint-disable-next-line no-await-in-loop
+    const appHtml = await render(url, tags);
+
+    const html = renderTemplate(template, appHtml, tags, hydration);
 
     if (url.endsWith('/')) {
       url = `${url}index`

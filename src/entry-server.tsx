@@ -5,9 +5,9 @@ import { getRoutes } from '~/routes';
 
 const { routes, names } = getRoutes();
 
-export function render(url: string) {
+export function render(url: string, tags: any[]) {
   return renderToStringAsync(() => (
-    <App routes={routes} url={url} />
+    <App routes={routes} url={url} tags={tags} />
   ));
 }
 
